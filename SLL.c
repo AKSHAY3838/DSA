@@ -2,11 +2,11 @@
 #include<string.h>
 #include<stdlib.h>
 int count=0;
-struct node
+ struct node
 {	int sem,phno;
 	char name[20],branch[20],usn[10];
 	struct node *next;
-}*first=NULL,*last=NULL,*temp=NULL,*temp1=NULL;
+}*first=NULL,*last=NULL,*temp=NULL;
 void create()
 {
 	int sem,phno;

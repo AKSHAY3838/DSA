@@ -2,15 +2,14 @@
 #include<stdlib.h>
 #include<string.h>
 int count=0;
-struct node
-{	
+struct node{
 	int ssn;
 	long int phno;
 	char name[20],dept[20],desg[10];
 	float sal;
     struct node *prev;
 	struct node *next;
-}*first=NULL,*last=NULL,*temp=NULL,*temp1=NULL;
+}*first=NULL,*last=NULL,*temp=NULL;
 
 void create()
 {
@@ -20,7 +19,7 @@ void create()
 	float sal;
 	temp=(struct node *)malloc(sizeof(struct node));
 	printf("\nEnter the employee details: ssn,name,dept,desg,sal,phno");
-	scanf("%d %s %s %s %f %ld",&ssn,name,dept,desg,&sal,&phno);
+	scanf("\n%d %s %s %s %f %ld",&ssn,name,dept,desg,&sal,&phno);
 	strcpy(temp->name,name);
 	strcpy(temp->dept,dept);
 	strcpy(temp->desg,desg);
@@ -105,10 +104,10 @@ void deleteatlast()
 	else
 	{
 		printf("\nThe deleted node is:");
-		temp1=last->prev;
+		temp=last->prev;
 		printf("%d\t%s\t%s\t%s\t%f\t%ld",last->ssn,last->name,last->dept,last->desg,last->sal,last->phno);
 		free(last);
-		last=temp1;
+		last=temp;
 		last->next=NULL;
 	}
 	count--;

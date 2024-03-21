@@ -23,7 +23,7 @@ Node* insertNode(Node* root,int value){
         root->left=insertNode(root->left,value);
     else
         root->right=insertNode(root->right,value);
-        return root;    
+    return root;    
 }
 void inorderTraversal(Node* root){
     if(root!=NULL){
@@ -49,7 +49,7 @@ void postorderTraversal( Node* root){
 int searchBST(Node *root,int key){
     if(root==NULL)
         return 0;
-else if (key==root->data){
+    else if (key==root->data){
         printf("key element is found\n");
         return 1;
     }
@@ -68,7 +68,7 @@ int main(){
     }
    while (1){
     printf("\nEnter the your choice");
-    printf("\n 1 for in-order,\n 2 for preorder,\n 3 for postorder,\n 4 fro searching an element,\n 5 for exit \n");
+    printf("\n 1 for in-order,\n 2 for preorder,\n 3 for postorder,\n 4 for searching an element,\n 5 for exit \n");
     scanf("%d",&choice);
     switch (choice)
     {

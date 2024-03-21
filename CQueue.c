@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib.h>
+// #include<stdlib.h>
 #define max 5
 int queue[max];
 int front=-1,rear=-1;
@@ -9,8 +9,8 @@ void enqueue(){
         printf("\nqueue is overflow");
     }
     else{
-        printf("enter the element");
-        scanf(" %c",&x);
+        printf("\nEnter the element");
+        scanf("\n %c",&x);
         if(front == -1 && rear == -1){
             front = rear = 0;
             queue[rear] = x;
@@ -23,7 +23,7 @@ void enqueue(){
 }
 void dequeue(){
     if (front == -1 && rear == -1)
-        printf("queue is an empty\n");
+        printf("\nqueue is an empty\n");
     else if(front == rear){
         printf("dequeued element is: %c \n",queue[front]);
         front = rear = -1; 
